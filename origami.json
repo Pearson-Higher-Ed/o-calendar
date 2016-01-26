@@ -1,0 +1,12 @@
+{
+  "description": "Calendar",
+  "origamiType": "module",
+  "origamiVersion": 1,
+  "support": "https://github.com/Pearson-Higher-Ed/o-calendar/issues",
+  "supportStatus": "experimental",
+  "demos": [{
+    "path": "/demos/demo.html",
+    "expanded": true,
+    "description": ""
+  }]
+}

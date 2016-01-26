@@ -1,0 +1,9 @@
+$o-assets-global-path: '/bower_components/';
+$o-calendar-is-silent: false;
+
+@import '../../main';
+
+body{
+  background-color:lightBlue;
+  margin: 20px 20px 20px 20px;
+}
