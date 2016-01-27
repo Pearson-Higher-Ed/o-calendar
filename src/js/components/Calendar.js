@@ -11,12 +11,12 @@ class Calendar extends Component {
 
 	render(){
 
-		let {daysOfWeek, monthHeader, weeks, weekOffset, incrementWeekoffset } = this.props
-console.log(Object.keys(this.props))
+		let {daysOfWeek, monthHeader, weeks, weekOffset, incrementWeekoffset, decrementWeekOffset, resetWeekOffset } = this.props
+		
 		return(
 			<table>
 				<thead>
-					<HeaderButtonRow monthHeader={monthHeader} weekOffset={weekOffset} />
+					<HeaderButtonRow {...this.props} />
 					<HeaderWeekDaysRow daysOfWeek={daysOfWeek} />
 				</thead>
 				<TableBody weeks={weeks} />

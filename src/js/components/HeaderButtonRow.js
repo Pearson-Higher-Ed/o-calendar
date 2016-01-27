@@ -5,32 +5,8 @@ import {incrementWeekoffset, resetWeekOffset, decrementWeekOffset } from './../a
 class HeaderButtonRow extends Component{
 
 
-//   handleButtonClick(e){
-//     e.preventDefault()
-//
-//     let { weekOffset } = this.props
-//
-//     console.log(Object.keys(this.props))
-//     console.log("ping "+e.target.id)
-//
-//   	switch(e.target.id){
-//   		case 'leftButton':
-//   			incrementWeekoffset(weekOffset)
-//   			break;
-//   		case 'centerButton':
-//   			resetWeekOffset(weekOffset)
-//   			break;
-//   		case 'rightButton':
-//   			decrementWeekOffset(weekOffset)
-//   			break;
-//   	}
-//
-//
-// }
-
-
 render(){
-console.log(this.props)
+
   let { monthHeader, dispatch, weekOffset, incrementWeekoffset } = this.props
 
   return(
@@ -38,9 +14,9 @@ console.log(this.props)
       <th className='headerTitle' colSpan='4'>{monthHeader}</th>
       <th colSpan='3'>
         <div className='buttonWrapper'>
-          <div className='button' id='leftButton'   tabIndex='1' onClick={() => incrementWeekoffset()}>&#10094;</div>
-          <div className='button' id='rightButton'  tabIndex='3' onClick={(e) => this.handleButtonClick(e)}>&#10095;</div>
-          <div className='button' id='centerButton' tabIndex='2' onClick={(e) => this.handleButtonClick(e)}>today</div>
+          <div className='button' id='leftButton'   tabIndex='1' onClick={decrementWeekOffset}>&#10094;</div>
+          <div className='button' id='rightButton'  tabIndex='3' onClick={incrementWeekoffset}>&#10095;</div>
+          <div className='button' id='centerButton' tabIndex='2' onClick={resetWeekOffset}>today</div>
         </div>
       </th>
     </tr>
@@ -52,9 +28,12 @@ console.log(this.props)
 }
 
 HeaderButtonRow.propTypes = {
-  monthHeader: PropTypes.string.isRequired,
-  weekOffset : PropTypes.number.isRequired,
-  incrementWeekoffset:PropTypes.func
+  monthHeader         : PropTypes.string.isRequired,
+  weekOffset          : PropTypes.number.isRequired,
+  incrementWeekoffset : PropTypes.func.isRequired,
+  decrementWeekOffset : PropTypes.func.isRequired,
+  resetWeekOffset     : PropTypes.func.isRequired
+
 }
 
 
