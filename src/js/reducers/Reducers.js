@@ -4,9 +4,6 @@ import { INCREMENT_WEEKOFFSET, DECREMENT_WEEKOFFSET, RESET_WEEKOFFSET } from './
 
 function weekOffset(state = 0 , action){
 
-console.log("*****action: "+action)
-console.log("*****state: "+state)
-
   switch(action.type){
     case INCREMENT_WEEKOFFSET :
       return state + 1

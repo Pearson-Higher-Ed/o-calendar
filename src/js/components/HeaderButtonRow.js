@@ -7,7 +7,7 @@ class HeaderButtonRow extends Component{
 
 render(){
 
-  let { monthHeader, dispatch, weekOffset, incrementWeekoffset } = this.props
+  let { monthHeader, dispatch, weekOffset, incrementWeekoffset, decrementWeekOffset, resetWeekOffset } = this.props
 
   return(
     <tr>
