@@ -54,7 +54,7 @@ console.log(this.props)
 HeaderButtonRow.propTypes = {
   monthHeader: PropTypes.string.isRequired,
   weekOffset : PropTypes.number.isRequired,
-  incrementWeekoffset:PropTypes.func.isRequired
+  incrementWeekoffset:PropTypes.func
 }
 
 
