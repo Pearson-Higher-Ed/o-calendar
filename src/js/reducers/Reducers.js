@@ -1,14 +1,17 @@
 import { combineReducers } from 'redux'
-import { INCREMENT_WEEKOFFSET, DECREMENT_WEEKOFFSET, RESET_WEEKOFFSET,incrementWeekoffset } from './../actions/Actions'
+import { INCREMENT_WEEKOFFSET, DECREMENT_WEEKOFFSET, RESET_WEEKOFFSET } from './../actions/Actions'
 
 
-function weekOffset(state, action){
+function weekOffset(state = 0 , action){
+
+console.log("*****action: "+action)
+console.log("*****state: "+state)
 
   switch(action.type){
     case INCREMENT_WEEKOFFSET :
-      return action.weekOffset =+ 1
+      return state + 1
     case DECREMENT_WEEKOFFSET :
-      return state =- 1
+      return state - 1
     case RESET_WEEKOFFSET :
       return state = 0
     default:
@@ -17,7 +20,7 @@ function weekOffset(state, action){
 
 }
 
-const Reducers =  weekOffset
+const Reducers =  combineReducers({weekOffset})
 
 
 
