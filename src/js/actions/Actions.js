@@ -2,6 +2,7 @@
 *--------------Actions Types------------------------
 */
 
+// Move Higlight...
 export const INCREMENT_WEEKOFFSET = 'INCREMENT_WEEKOFFSET'
 export const DECREMENT_WEEKOFFSET = 'DECREMENT_WEEKOFFSET'
 export const RESET_WEEKOFFSET     = 'RESET_WEEKOFFSET'

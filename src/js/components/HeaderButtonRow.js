@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-import {incrementWeekoffset, resetWeekOffset, decrementWeekOffset } from './../actions/Actions'
 
 
 class HeaderButtonRow extends Component{
@@ -7,7 +6,7 @@ class HeaderButtonRow extends Component{
 
 render(){
 
-  let { monthHeader, dispatch, weekOffset, incrementWeekoffset, decrementWeekOffset, resetWeekOffset } = this.props
+  let { monthHeader, weekOffset, incrementWeekoffset, decrementWeekOffset, resetWeekOffset } = this.props
 
   return(
     <tr>
