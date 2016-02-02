@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 
-export default class TableBody extends React.Component{
+export default class TableBody extends Component{
 
   constructor(props){
     super(props)
@@ -119,5 +119,5 @@ TableBody.PropTypes = {
 }
 
 TableBody.defaultProps = {
-  weeks      : 4
+  weeks      : 3
 }

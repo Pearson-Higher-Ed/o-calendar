@@ -11,8 +11,8 @@ class Calendar extends Component {
 
 	render(){
 
-		let {daysOfWeek, monthHeader, weeks, weekOffset, incrementWeekoffset, decrementWeekOffset, resetWeekOffset } = this.props
-		
+		let {daysOfWeek, weeks } = this.props
+
 		return(
 			<table>
 				<thead>
@@ -41,7 +41,7 @@ Calendar.propTypes = {
 Calendar.defaultProps = {
 	data                : [],
 	daysOfWeek          : ["S", "M", "T", "W", "T", "F", "S"],
-	weeks               : 4,
+	weeks               : 3,
 	weekOffset          : 0,
 	monthHeader         : HeaderMonth()
 }
